@@ -24,7 +24,7 @@ public class YoutubeTest {
     public static void Setup(){
 
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        
     }
 
 
