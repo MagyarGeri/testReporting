@@ -23,7 +23,7 @@ public class YoutubeTest {
     @BeforeAll
     public static void Setup(){
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\gerim\\Documents\\Codecool\\Projects\\1TA\\testReporting\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
     }
 
