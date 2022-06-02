@@ -16,14 +16,14 @@ import java.time.Duration;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class YoutubeTest {
 
-    static WebDriver driver;
+    static WebDriver driver = new ChromeDriver();
     Actions action;
 
 
     @BeforeAll
     public static void Setup(){
 
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\gerim\\Documents\\Codecool\\Projects\\1TA\\testReporting\\chromedriver.exe");
     }
 
 
@@ -250,13 +250,15 @@ public class YoutubeTest {
         unSubsribeButton.click();
     }
 
+    //C:\Users\gerim\Documents\Codecool\Projects\1TA\testReporting\chromedriver.exe
 
-   /* @AfterEach
+    @AfterEach
     public void Dispose(){
 
-        driver = new ChromeDriver();
+
+
         driver.quit();;
-    }*/
+    }
 
 
 }
