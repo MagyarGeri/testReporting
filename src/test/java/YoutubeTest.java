@@ -16,7 +16,7 @@ import java.time.Duration;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class YoutubeTest {
 
-    static WebDriver driver = new ChromeDriver();
+    static WebDriver driver;
     Actions action;
 
 
