@@ -16,7 +16,7 @@ import java.time.Duration;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class YoutubeTest {
 
-     static WebDriver driver;
+    static WebDriver driver;
     Actions action;
 
 
@@ -24,7 +24,6 @@ public class YoutubeTest {
     public static void Setup(){
 
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        
     }
 
 
@@ -251,12 +250,9 @@ public class YoutubeTest {
         unSubsribeButton.click();
     }
 
-    //C:\Users\gerim\Documents\Codecool\Projects\1TA\testReporting\chromedriver.exe
 
     @AfterEach
     public void Dispose(){
-
-
 
         driver.quit();;
     }
