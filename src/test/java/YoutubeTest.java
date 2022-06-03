@@ -28,8 +28,8 @@ public class YoutubeTest {
     @BeforeAll
     public static void Setup(){
 
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-       /* WebDriverManager.chromedriver().setup();
+        //System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+       WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
@@ -40,7 +40,7 @@ public class YoutubeTest {
         options.addArguments("start-maximized","--incognito", "--lang=en");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().window().maximize();*/
+        driver.manage().window().maximize();
     }
 
 
