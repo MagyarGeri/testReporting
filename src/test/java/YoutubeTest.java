@@ -224,6 +224,7 @@ public class YoutubeTest {
         WebElement searchicon = driver.findElement(By.xpath("//*[@id=\"search-icon-legacy\"]"));
         action.pause(Duration.ofMillis(1000));
         searchicon.click();
+        action.pause(Duration.ofMillis(2000));
         WebElement firstVideo = driver.findElement(By.xpath("//*[@id=\"items\"]/ytd-video-renderer[1]"));
         firstVideo.click();
 
@@ -253,6 +254,7 @@ public class YoutubeTest {
         WebElement searchicon = driver.findElement(By.xpath("//*[@id=\"search-icon-legacy\"]"));
         action.pause(Duration.ofMillis(2000));
         searchicon.click();
+        action.pause(Duration.ofMillis(2000));
         WebElement firstVideo = driver.findElement(By.xpath("//*[@id=\"items\"]/ytd-video-renderer[1]"));
         firstVideo.click();
 
