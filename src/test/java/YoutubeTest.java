@@ -52,7 +52,7 @@ public class YoutubeTest {
         driver = new ChromeDriver(options);
         Actions action = new Actions(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.navigate().to("https://www.youtube.com/");
+        driver.get("https://www.youtube.com/");
     }
 
     public  void notIncognito(){
