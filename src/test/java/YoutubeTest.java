@@ -1,4 +1,5 @@
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
@@ -8,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 
 //ANGOL nyelvű böngésző és Youtube kell hozzá
@@ -17,14 +19,28 @@ import java.time.Duration;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class YoutubeTest {
 
-    WebDriver driver = new ChromeDriver();
+
+
+    WebDriver driver;
     Actions action;
 
 
     @BeforeAll
     public static void Setup(){
 
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--headless");
+        options.addArguments("--window-size=1920,1080");
+        options.addArguments("start-maximized");
+        WebDriver driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
     }
 
 
@@ -255,7 +271,7 @@ public class YoutubeTest {
     @AfterEach
     public void Dispose(){
 
-        driver = new ChromeDriver();
+
         driver.quit();;
     }
 
