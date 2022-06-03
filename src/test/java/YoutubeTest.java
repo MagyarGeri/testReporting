@@ -21,16 +21,15 @@ public class YoutubeTest {
 
 
 
-    public WebDriver driver;
+    static WebDriver driver;
     Actions action;
 
 
     @BeforeAll
-    public void Setup(){
+    public static void Setup(){
 
-
-
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+       /* WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
@@ -38,11 +37,12 @@ public class YoutubeTest {
         options.addArguments("--disable-extensions");
         options.addArguments("--headless");
         options.addArguments("--window-size=1920,1080");
-        options.addArguments("start-maximized");
+        options.addArguments("start-maximized","--incognito", "--lang=en");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+        driver.manage().window().maximize();*/
     }
+
 
 
     public void incognito(){
@@ -222,10 +222,11 @@ public class YoutubeTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"search-icon-legacy\"]")));
         action.pause(Duration.ofMillis(1000));
         WebElement searchicon = driver.findElement(By.xpath("//*[@id=\"search-icon-legacy\"]"));
+        action.pause(Duration.ofMillis(1000));
         searchicon.click();
         WebElement firstVideo = driver.findElement(By.xpath("//*[@id=\"items\"]/ytd-video-renderer[1]"));
         firstVideo.click();
-        action.pause(Duration.ofMillis(1000));
+
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
@@ -250,6 +251,7 @@ public class YoutubeTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"search-icon-legacy\"]")));
         action.pause(Duration.ofMillis(1000));
         WebElement searchicon = driver.findElement(By.xpath("//*[@id=\"search-icon-legacy\"]"));
+        action.pause(Duration.ofMillis(2000));
         searchicon.click();
         WebElement firstVideo = driver.findElement(By.xpath("//*[@id=\"items\"]/ytd-video-renderer[1]"));
         firstVideo.click();
