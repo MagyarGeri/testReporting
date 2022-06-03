@@ -1,4 +1,5 @@
 
+import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,7 +17,7 @@ import java.time.Duration;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class YoutubeTest {
 
-    static WebDriver driver;
+    WebDriver driver = new ChromeDriver();
     Actions action;
 
 
