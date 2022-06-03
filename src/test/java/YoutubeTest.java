@@ -29,7 +29,7 @@ public class YoutubeTest {
     public static void Setup(){
 
 
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
