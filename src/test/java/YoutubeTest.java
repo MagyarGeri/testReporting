@@ -21,12 +21,12 @@ public class YoutubeTest {
 
 
 
-    WebDriver driver;
+    public WebDriver driver;
     Actions action;
 
 
     @BeforeAll
-    public static void Setup(){
+    public void Setup(){
 
 
 
@@ -39,7 +39,7 @@ public class YoutubeTest {
         options.addArguments("--headless");
         options.addArguments("--window-size=1920,1080");
         options.addArguments("start-maximized");
-        WebDriver driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
