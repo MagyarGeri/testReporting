@@ -21,7 +21,7 @@ public class YoutubeTest {
 
 
 
-    WebDriver driver;
+    WebDriver driver = new ChromeDriver();
     Actions action;
 
 
