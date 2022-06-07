@@ -51,7 +51,8 @@ public class YoutubeTest {
 
 //ytd-button-renderer[@class="signin style-scope ytd-consent-bump-v2-lightbox style-suggestive size-default"]
 //*[@id="topbar"]/div[2]/div[2]
-        WebElement signin = driver.findElement(By.xpath("//*[@id=\"topbar\"]/div[2]/div[2]/ytd-button-renderer/a"));
+        //*[@id="topbar"]/div[2]/div[2]/ytd-button-renderer/a
+        WebElement signin = driver.findElement(By.xpath("//a[@href=\"https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=en&gae=cb-eomty\"]"));
         signin.click();
         Actions action = new Actions(driver);
         action.pause(Duration.ofMillis(200));
