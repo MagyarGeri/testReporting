@@ -49,9 +49,9 @@ public class YoutubeTest {
     public void login() {
 
 
+//ytd-button-renderer[@class="signin style-scope ytd-consent-bump-v2-lightbox style-suggestive size-default"]
 
-
-        WebElement signin = driver.findElement(By.xpath("//ytd-button-renderer[@class=\"signin style-scope ytd-consent-bump-v2-lightbox style-suggestive size-default\"]"));
+        WebElement signin = driver.findElement(By.xpath("//*[@id=\"topbar\"]/div[2]/div[2]"));
         signin.click();
         Actions action = new Actions(driver);
         action.pause(Duration.ofMillis(200));
