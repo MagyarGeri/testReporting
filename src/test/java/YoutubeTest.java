@@ -21,12 +21,12 @@ public class YoutubeTest {
 
 
 
-    static WebDriver driver;
+    WebDriver driver;
     Actions action;
 
 
-    @BeforeAll
-    public static void Setup(){
+    @BeforeEach
+    public void Setup(){
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
@@ -34,7 +34,7 @@ public class YoutubeTest {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-extensions");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--window-size=1920,1080");
         options.addArguments("start-maximized","--incognito", "--lang=en");
         driver = new ChromeDriver(options);
