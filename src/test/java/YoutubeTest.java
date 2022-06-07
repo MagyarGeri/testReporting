@@ -59,7 +59,7 @@ public class YoutubeTest {
         email.sendKeys("youtube.test@freemail.hu");
 
 
-        WebElement nextButton = driver.findElement(By.xpath("//*[@class=\"qhFLie\"]//button"));
+        WebElement nextButton = driver.findElement(By.xpath("//*[@id=\"identifierNext\"]"));
         nextButton.click();
         WebElement password = driver.findElement(By.xpath("//*[@id=\"password\"]//input"));
         password.click();
