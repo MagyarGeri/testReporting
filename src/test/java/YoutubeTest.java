@@ -36,7 +36,7 @@ public class YoutubeTest {
         options.addArguments("--disable-extensions");
         options.addArguments("--headless");
         options.addArguments("--window-size=1920,1080");
-        options.addArguments("start-maximized");
+        options.addArguments("start-maximized","--incognito", "--lang=en");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
