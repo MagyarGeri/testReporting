@@ -36,7 +36,7 @@ public class YoutubeTest {
         options.addArguments("--disable-extensions");
         options.addArguments("--headless");
         options.addArguments("--window-size=1920,1080");
-        options.addArguments("start-maximized","--incognito", "--lang=en");
+        options.addArguments("start-maximized");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
@@ -49,7 +49,7 @@ public class YoutubeTest {
     public void login() {
 
 
-        //incognito();
+
 
         WebElement signin = driver.findElement(By.xpath("//ytd-button-renderer[@class=\"signin style-scope ytd-consent-bump-v2-lightbox style-suggestive size-default\"]"));
         signin.click();
