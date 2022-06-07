@@ -61,7 +61,7 @@ public class YoutubeTest {
 
         WebElement nextButton = driver.findElement(By.xpath("//*[@id=\"identifierNext\"]"));
         nextButton.click();
-        WebElement password = driver.findElement(By.xpath("//*[@class=\"Xb9hP\"]"));
+        WebElement password = driver.findElement(By.xpath("//*[@class=\"aCsJod oJeWuf\"]"));
         password.click();
         password.sendKeys("!Codecool3");
         WebElement next = driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/div/button/span"));
