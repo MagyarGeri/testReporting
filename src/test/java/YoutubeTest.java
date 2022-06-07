@@ -48,7 +48,7 @@ public class YoutubeTest {
     @Order(1)
     public void login() {
 
-
+        driver.get("https://www.youtube.com/");
         WebElement signin = driver.findElement(By.xpath("//*[@id=\"topbar\"]/div[2]/div[2]/ytd-button-renderer/a"));
         signin.click();
         Actions action = new Actions(driver);
