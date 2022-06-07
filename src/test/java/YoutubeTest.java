@@ -28,8 +28,7 @@ public class YoutubeTest {
     @BeforeAll
     public static void Setup(){
 
-        //System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-       WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
@@ -37,10 +36,11 @@ public class YoutubeTest {
         options.addArguments("--disable-extensions");
         options.addArguments("--headless");
         options.addArguments("--window-size=1920,1080");
-        options.addArguments("start-maximized","--incognito", "--lang=en");
+        options.addArguments("start-maximized");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+
     }
 
 
@@ -156,9 +156,11 @@ public class YoutubeTest {
         action.pause(Duration.ofMillis(1000));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"search-icon-legacy\"]")));
 
-        action.pause(Duration.ofMillis(1000));
+
 
         WebElement searchicon = driver.findElement(By.xpath("//*[@id=\"search-icon-legacy\"]"));
+        action.pause(Duration.ofMillis(2000));
+
         searchicon.click();
 
 
