@@ -49,7 +49,7 @@ public class YoutubeTest {
     public void login() {
 
         driver.get("https://www.youtube.com/");
-        WebElement signin = driver.findElement(By.xpath("//*[@id=\"topbar\"]/div[2]/div[2]/ytd-button-renderer/a"));
+        WebElement signin = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[6]/div[1]/ytd-button-renderer[2]"));
         signin.click();
         Actions action = new Actions(driver);
         action.pause(Duration.ofMillis(200));
