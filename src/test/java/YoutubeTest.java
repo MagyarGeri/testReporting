@@ -75,7 +75,7 @@ public class YoutubeTest {
     public void logout(){
 
         login();
-        WebElement avatar = driver.findElement(By.xpath("//button[@aria-label=\"Account profile photo that opens list of alternate accounts\"]"));
+        WebElement avatar = driver.findElement(By.cssSelector("#buttons > ytd-topbar-menu-button-renderer:nth-child(5)"));
         avatar.click();
         WebElement logout = driver.findElement(By.xpath("//a[@href=\"/logout\"]"));
         logout.click();
