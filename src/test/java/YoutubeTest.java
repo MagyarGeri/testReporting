@@ -75,7 +75,7 @@ public class YoutubeTest {
     public void logout(){
 
         login();
-        WebElement avatar = driver.findElement(By.cssSelector("#buttons > ytd-topbar-menu-button-renderer:nth-child(5)"));
+        WebElement avatar = driver.findElement(By.xpath("//*[@id=\"buttons\"]/ytd-topbar-menu-button-renderer[3]"));
         avatar.click();
         WebElement logout = driver.findElement(By.xpath("//a[@href=\"/logout\"]"));
         logout.click();
